@@ -1,0 +1,188 @@
+.sign-up {
+  width: 100%;
+  height: 100vh;
+  background: $main;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    background-image: url(../img/welcome-bg.png);
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    width: 1400px;
+    height: 185px;
+    background-position:bottom 0 center;
+    @include m992 {
+      background-size: cover;
+      background-position:left;
+      width: 100%;
+    }
+  }
+  .pop-sign,.pop-login {
+    width: 100%;
+    height: 100%;
+    background: rgba(#000,.7);
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    .closer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: none;
+      border: none;
+      color: $black;
+    }
+    .sign-box,.login-box {
+      @include itemCenter();
+      width: 400px;
+      background: $white;
+      padding: 40px 30px;
+      text-align: left;
+      border-radius: 5px;
+      box-shadow: 0 0 30px #333;
+      z-index: 11;
+      @include m576 {
+        width: 300px;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 40px;
+        @extend %Raleway-font;
+        font-size: 25px;
+        color: $main;
+      }
+      form {
+        label {
+          font-size: 12px;
+          font-weight: bold;
+          @extend %Raleway-font;
+        }
+        .form-control {
+          margin-bottom: 10px;
+          border-radius: 0;
+          font-weight: 100;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        .submit-btn {
+          background-color: $main;
+          border: none;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 2px;
+          color: $white;
+          @extend %Raleway-font;
+          font-weight: bold;
+          letter-spacing: 1px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .first-page {
+    @include itemCenter();
+    .cat {
+      position: relative;
+      text-align: center;
+      img {
+        width: 100px;
+      }
+    }
+    .wel {
+      top: 43%;
+      color: $white;
+      text-align: center;
+    }
+    .login-form {
+      text-align: center;
+      .sign-up-btn,.log-in-btn {
+        background: $white;
+        display: block;
+        margin: 10px auto;
+        border: none;
+        color: $main;
+        border-radius: 3px;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+      }
+      .log-in-btn {
+        background: none;
+        border: 1px solid $white;
+        color: $white;
+      }
+    }
+  }
+  .success-box {
+    background: #2ecc71;
+    color: $white;
+    width: 600px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    border-radius: 5px;
+    display: none;
+    i {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+    }
+    p {
+      display: inline-block;
+    }
+  }
+  .false-box {
+    background: #cc0000;
+    color: $white;
+    width: 600px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    border-radius: 5px;
+    display: none;
+    i {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+    }
+    p {
+      display: inline-block;
+    }
+  }
+  .social-media {
+    @include itemCenter();
+    left:10%;
+    @include m576 {
+      left:5%;
+    }
+    ul {
+      li {
+        margin-bottom: 15px;
+        a {
+          color: $white;
+          font-size: 20px;
+
+        }
+      }
+    }
+  }
+}

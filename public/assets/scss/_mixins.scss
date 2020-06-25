@@ -1,0 +1,211 @@
+// @include linkx(white, blue, green, red);
+@mixin linkx($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+      text-decoration: none;
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+// @include trans(.3s);
+@mixin trans($type, $x, $ease) {
+    -webkit-transition: $type $x $ease;
+       -moz-transition: $type $x $ease;
+        -ms-transition: $type $x $ease;
+         -o-transition: $type $x $ease;
+            transition: $type $x $ease;
+}
+
+
+// @include m1200 {}
+@mixin m1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+// @include m992 {}
+@mixin m992 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+// @include m768 {}
+@mixin m768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// @include m576 {}
+@mixin m576 {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+//@include keyframes(slide-down) {
+//  0% { opacity: 1; }
+//  90% { opacity: 0; }
+// }
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+//.element {
+    //  @include animation('slide-down 5s 3');
+// }
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+       -moz-animation: #{$str};
+        -ms-animation: #{$str};
+         -o-animation: #{$str};
+            animation: #{$str};
+}
+
+
+// @include parallax(100%, img , jpg);
+@mixin parallax($height, $image: null, $extensions: null) {
+    height: $height;
+    background-image: url(assets/img/#{$image}.#{$extensions});
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+// @include icon(32px, svg);
+@mixin icon($x, $svg: null) {
+    width: $x;
+    height: $x;
+    content: "";
+    position: absolute;
+    background-image: url(assets/img/svg/#{$svg}.svg);
+    background-repeat: no-repeat;
+}
+
+// @include jpg();
+@mixin jpg($jpg: null) {
+    background-image: url(assets/img/#{$jpg}.jpg);
+}
+
+// @include png();
+@mixin png($png: null) {
+    background-image: url(assets/img/#{$png}.png);
+}
+
+
+// @include pos(absolute, 1px, 2px, 3px, 4px);
+@mixin pos($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// @include itemCenter();
+@mixin itemCenter() {
+    position: absolute;
+    height: auto;
+    right: auto;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+
+// @include scrollbars(.5em, #000);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, #000,  20%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+
+//@include border-gradient(top left, #3adc95, #8bd349, 10px);
+@mixin border-gradient($dir, $from, $to, $width) {
+  border-left: $width solid $from;
+  border-right: $width solid $to;
+  background-image:
+    // Needed for both the top and bottom borders
+    -webkit-linear-gradient($dir, $from, $to),
+    -webkit-linear-gradient($dir, $from, $to);
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+//@include text-gradient(top left, #3adc95, #8bd349);
+@mixin text-gradient($dir, $from, $to) {
+  background: -webkit-linear-gradient($dir, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// @include box-size();
+@mixin box-size() {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+}
+// @include overlay(#000,0.5);
+@mixin overlay($color,$count) {
+  background: rgba($color,$count);
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+// @include section-mar(20px,20px);
+@mixin section-mar($x,$y) {
+  margin-top: $x;
+  margin-bottom: $y;
+}

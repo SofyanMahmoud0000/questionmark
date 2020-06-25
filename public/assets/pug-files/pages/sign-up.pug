@@ -1,0 +1,60 @@
+section(class="sign-up")
+  .container
+    .pop-sign
+      .sign-box
+        button(type="button" class="closer")
+          i(class="fas fa-times")
+        h3.heading-s Sign Up
+        form(method="POST" action="signup")
+          label Name:*
+          input(type="text" class="form-control" placeholder="" name="firstname")
+          label Email:*
+          input(type="email" class="form-control" placeholder="" name="email")
+          label Password:*
+          input(type="password" class="form-control" placeholder="" name="password")
+          label Confirm Password:*
+          input(type="password" class="form-control" placeholder="" name="password_confirmation")
+          button(type="submit" class="submit-btn") Register
+    .pop-login
+      .login-box
+        button(type="button" class="closer")
+          i(class="fas fa-times")
+        h3.heading-s Log In
+        form(method="POST" action="login")
+          label Username or Email:*
+          input(type="email" class="form-control" placeholder="" name="login")
+          label Password:*
+          input(type="password" class="form-control" placeholder="" name="password")
+          button(type="submit" class="submit-btn") Log In      
+  
+    .first-page
+      .cat
+        img(src="https://d1muxuiltlupn6.cloudfront.net/assets/owlcat-look-c5bf218fe8bfef6e2d2c1232ead722230299cc78789c2642fd6bb39de0a3bb92.gif" class="img-fluid")
+      p.wel Curious? Just ask!<br> Openly or anonymously.
+      .login-form
+        button(type="button" class="sign-up-btn") Sign Up
+        button(type="button" class="log-in-btn") Log In
+    //success Box    
+    .success-box
+      i(class="fas fa-check")
+      p You have confirmed your account, you can login now
+    //False Box
+    .false-box
+      i(class="fas fa-times")
+      p Error !
+    .social-media
+      ul.list-unstyled
+        li
+          a(href="#")
+            i(class="fab fa-facebook-f")
+        li
+          a(href="#")
+            i(class="fab fa-twitter")
+        li
+          a(href="#")
+            i(class="fab fa-instagram")
+        li
+          a(href="#")
+            i(class="fab fa-youtube")
+
+            

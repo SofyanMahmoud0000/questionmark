@@ -1,0 +1,343 @@
+::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em; }
+
+::-webkit-scrollbar-thumb {
+  background: #ff8f1f; }
+
+::-webkit-scrollbar-track {
+  background: #331d06; }
+
+body {
+  scrollbar-face-color: #ff8f1f;
+  scrollbar-track-color: #331d06; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  color: #000 !important; }
+
+/* ================= */
+/*  Spacing Classes
+/* ================= */
+.fs-14 {
+  font-size: 14px;
+  line-height: 24px; }
+
+.p-large {
+  font-size: 15px;
+  margin-bottom: 0;
+  color: #777; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mt-35 {
+  margin-top: 35px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mt-45 {
+  margin-top: 45px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.mb-35 {
+  margin-bottom: 35px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-45 {
+  margin-bottom: 45px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.mb-55 {
+  margin-bottom: 55px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+.mr-10 {
+  margin-right: 10px; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.navigation-bar a span, .sign-up .pop-sign .sign-box form label, .sign-up .pop-sign .login-box form label, .sign-up .pop-login .sign-box form label, .sign-up .pop-login .login-box form label, .sign-up .pop-sign .sign-box form .submit-btn, .sign-up .pop-sign .login-box form .submit-btn, .sign-up .pop-login .sign-box form .submit-btn, .sign-up .pop-login .login-box form .submit-btn {
+  font-family: 'Raleway', sans-serif; }
+
+.navigation-bar {
+  font-family: 'Luckiest Guy', cursive; }
+
+.upper {
+  text-transform: uppercase; }
+
+.navigation-bar {
+  background-color: #03151a;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99; }
+  @media (max-width: 576px) {
+    .navigation-bar {
+      padding: 0; } }
+  .navigation-bar a {
+    font-size: 36px;
+    color: #ff8f1f;
+    display: block;
+    text-decoration: none; }
+    .navigation-bar a span {
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold; }
+
+.sign-up {
+  width: 100%;
+  height: 100vh;
+  background: #010e11;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden; }
+  .sign-up:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-image: url(../img/welcome-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    width: 1400px;
+    height: 185px;
+    background-position: bottom 0 center; }
+    @media (max-width: 992px) {
+      .sign-up:after {
+        background-size: 100vh;
+        left: 0;
+        width: 100%; } }
+  .sign-up .pop-sign, .sign-up .pop-login {
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 14, 17, 0.7);
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none; }
+    .sign-up .pop-sign .closer, .sign-up .pop-login .closer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: none;
+      border: none;
+      color: #000; }
+    .sign-up .pop-sign .sign-box, .sign-up .pop-sign .login-box, .sign-up .pop-login .sign-box, .sign-up .pop-login .login-box {
+      position: absolute;
+      height: auto;
+      right: auto;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 400px;
+      background: #FFF;
+      padding: 40px 30px;
+      text-align: left;
+      border-radius: 5px;
+      box-shadow: 0 0 30px #333;
+      z-index: 11; }
+      @media (max-width: 576px) {
+        .sign-up .pop-sign .sign-box, .sign-up .pop-sign .login-box, .sign-up .pop-login .sign-box, .sign-up .pop-login .login-box {
+          width: 300px;
+          border-radius: 5px;
+          padding: 20px; } }
+      .sign-up .pop-sign .sign-box h4, .sign-up .pop-sign .login-box h4, .sign-up .pop-login .sign-box h4, .sign-up .pop-login .login-box h4 {
+        color: #acacac;
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        font-style: italic;
+        z-index: 1;
+        margin-bottom: 20px; }
+        .sign-up .pop-sign .sign-box h4:before, .sign-up .pop-sign .login-box h4:before, .sign-up .pop-login .sign-box h4:before, .sign-up .pop-login .login-box h4:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          z-index: -1;
+          width: 100%;
+          height: 1px;
+          background: #acacac; }
+        .sign-up .pop-sign .sign-box h4 span, .sign-up .pop-sign .login-box h4 span, .sign-up .pop-login .sign-box h4 span, .sign-up .pop-login .login-box h4 span {
+          background: #FFF;
+          padding: 0 5px;
+          z-index: 1; }
+      .sign-up .pop-sign .sign-box .google-btn, .sign-up .pop-sign .login-box .google-btn, .sign-up .pop-login .sign-box .google-btn, .sign-up .pop-login .login-box .google-btn {
+        background: #DB4437;
+        color: #FFF;
+        padding: 20px 30px;
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 50px; }
+        @media (max-width: 576px) {
+          .sign-up .pop-sign .sign-box .google-btn, .sign-up .pop-sign .login-box .google-btn, .sign-up .pop-login .sign-box .google-btn, .sign-up .pop-login .login-box .google-btn {
+            font-size: 12px; } }
+        .sign-up .pop-sign .sign-box .google-btn i, .sign-up .pop-sign .login-box .google-btn i, .sign-up .pop-login .sign-box .google-btn i, .sign-up .pop-login .login-box .google-btn i {
+          margin-right: 60px; }
+          @media (max-width: 576px) {
+            .sign-up .pop-sign .sign-box .google-btn i, .sign-up .pop-sign .login-box .google-btn i, .sign-up .pop-login .sign-box .google-btn i, .sign-up .pop-login .login-box .google-btn i {
+              margin-right: 40px; } }
+      .sign-up .pop-sign .sign-box form label, .sign-up .pop-sign .login-box form label, .sign-up .pop-login .sign-box form label, .sign-up .pop-login .login-box form label {
+        font-size: 12px;
+        font-weight: bold; }
+      .sign-up .pop-sign .sign-box form .form-control, .sign-up .pop-sign .login-box form .form-control, .sign-up .pop-login .sign-box form .form-control, .sign-up .pop-login .login-box form .form-control {
+        margin-bottom: 10px;
+        border-radius: 0;
+        font-weight: 100; }
+        .sign-up .pop-sign .sign-box form .form-control:focus, .sign-up .pop-sign .login-box form .form-control:focus, .sign-up .pop-login .sign-box form .form-control:focus, .sign-up .pop-login .login-box form .form-control:focus {
+          box-shadow: none; }
+      .sign-up .pop-sign .sign-box form .submit-btn, .sign-up .pop-sign .login-box form .submit-btn, .sign-up .pop-login .sign-box form .submit-btn, .sign-up .pop-login .login-box form .submit-btn {
+        background-color: #ff8f1f;
+        border: none;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+        color: #FFF;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 16px;
+        outline: inherit; }
+  .sign-up .first-page {
+    position: absolute;
+    height: auto;
+    right: auto;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .sign-up .first-page .cat {
+      position: relative;
+      text-align: center; }
+      .sign-up .first-page .cat img {
+        width: 100px; }
+    .sign-up .first-page .wel {
+      top: 43%;
+      color: #FFF;
+      text-align: center;
+      margin-bottom: 20px; }
+    .sign-up .first-page .login-form {
+      text-align: center; }
+      .sign-up .first-page .login-form .sign-up-btn, .sign-up .first-page .login-form .log-in-btn {
+        background: none;
+        display: block;
+        margin: 10px auto;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #FFF;
+        border-radius: 3px;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        outline: inherit; }
+  .sign-up .success-box, .sign-up .false-box {
+    background: #2ecc71;
+    color: #FFF;
+    border-radius: 5px;
+    display: block;
+    padding: 10px 15px;
+    text-align: center; }
+    @media (max-width: 576px) {
+      .sign-up .success-box, .sign-up .false-box {
+        width: auto;
+        font-size: 12px;
+        padding: 10px 20px; } }
+    .sign-up .success-box p, .sign-up .false-box p {
+      margin: 0; }
+  .sign-up .false-box {
+    background: #ef3a3a; }
+  .sign-up .social-media {
+    position: absolute;
+    height: auto;
+    right: auto;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 10%; }
+    @media (max-width: 576px) {
+      .sign-up .social-media {
+        left: 5%; } }
+    .sign-up .social-media ul li {
+      margin-bottom: 15px; }
+      .sign-up .social-media ul li a {
+        color: #FFF;
+        font-size: 20px; }
+
+/*# sourceMappingURL=main.css.map */

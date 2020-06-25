@@ -1,0 +1,21 @@
+.navigation-bar {
+  background-color: $white;
+  padding: 5px 0;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 99;
+  @extend %Luckiest-font;
+  a {
+    font-size: 36px;
+    color: $main;
+    display: block;
+    text-decoration: none;
+    span {
+      @extend %Raleway-font;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// Scroll Page
+@include scrollbars(.4em, $main);
+
+* {
+  @include box-size();
+}
+body {
+  @extend %font-family;
+  color: #000 !important;  
+}

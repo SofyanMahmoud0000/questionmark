@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>Change Email</h1>
+<p>We change the email here</p>
+<!-- START_ae62fc63378feeda6d6b26039d6462a9 -->
+<h2>changeemail</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/changeemail?email=7" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/changeemail");
+
+    let params = {
+            "email": "7",
+        };
+    Object.keys(params).forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (302):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET changeemail</code></p>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>The new email the usr want to connect with his account.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_ae62fc63378feeda6d6b26039d6462a9 -->
+<h1>Create User</h1>
+<p>We create the new user in this class</p>
+<!-- START_41ec161bb0631a5e8679f86e04fd290e -->
+<h2>signup</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/signup?email=doloribus&amp;password=eligendi&amp;password_confirmation=in&amp;name=similique" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/signup");
+
+    let params = {
+            "email": "doloribus",
+            "password": "eligendi",
+            "password_confirmation": "in",
+            "name": "similique",
+        };
+    Object.keys(params).forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST signup</code></p>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password_confirmation</td>
+<td>required</td>
+</tr>
+<tr>
+<td>name</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_41ec161bb0631a5e8679f86e04fd290e -->
+<h1>Image</h1>
+<p>We add and delete the image here</p>
+<!-- START_5208d248099fa73188461a192a408072 -->
+<h2>changeimage</h2>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/changeimage?image=voluptatem" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/changeimage");
+
+    let params = {
+            "image": "voluptatem",
+        };
+    Object.keys(params).forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST changeimage</code></p>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_5208d248099fa73188461a192a408072 -->
+<!-- START_9e3a54a272d54a2dfefbb77b2eda7d7e -->
+<h2>deleteimage</h2>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/deleteimage" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/deleteimage");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (302):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET deleteimage</code></p>
+<!-- END_9e3a54a272d54a2dfefbb77b2eda7d7e -->
+<h1>control</h1>
+<p>We control and setting the user here</p>
+<!-- START_cb859c8e84c35d7133b6a6c8eac253f8 -->
+<h2>home</h2>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/home" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/home");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (302):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET home</code></p>
+<!-- END_cb859c8e84c35d7133b6a6c8eac253f8 -->
+<!-- START_568bd749946744d2753eaad6cfad5db6 -->
+<h2>logout</h2>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/logout" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/logout");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (302):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET logout</code></p>
+<!-- END_568bd749946744d2753eaad6cfad5db6 -->
+<!-- START_b2fc670627439711d7a6aa4b696a7ac9 -->
+<h2>changename</h2>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/changename?name=qui" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/changename");
+
+    let params = {
+            "name": "qui",
+        };
+    Object.keys(params).forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (302):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET changename</code></p>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_b2fc670627439711d7a6aa4b696a7ac9 -->
+<!-- START_0d6e571e0124de04ada2761f5ea7d533 -->
+<h2>changepassword</h2>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/changepassword?currentPassword=distinctio&amp;newPassword=alias&amp;newPassword_confirmation=laborum" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/changepassword");
+
+    let params = {
+            "currentPassword": "distinctio",
+            "newPassword": "alias",
+            "newPassword_confirmation": "laborum",
+        };
+    Object.keys(params).forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST changepassword</code></p>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currentPassword</td>
+<td>required</td>
+</tr>
+<tr>
+<td>newPassword</td>
+<td>required</td>
+</tr>
+<tr>
+<td>newPassword_confirmation</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_0d6e571e0124de04ada2761f5ea7d533 -->
+<h1>sign in</h1>
+<p>we sign in the website here</p>
+<!-- START_093ec7e72da3a515f4f1521e292fe92c -->
+<h2>signin</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/signin?email=temporibus&amp;password=debitis" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/signin");
+
+    let params = {
+            "email": "temporibus",
+            "password": "debitis",
+        };
+    Object.keys(params).forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST signin</code></p>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_093ec7e72da3a515f4f1521e292fe92c -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
