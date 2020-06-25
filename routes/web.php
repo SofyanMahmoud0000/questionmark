@@ -133,6 +133,10 @@ Route::group(["middleware" => "admin"] , function(){
 
 });
 
+Route::get("asset", function(){
+    echo asset("");
+});
+
 
 
 
