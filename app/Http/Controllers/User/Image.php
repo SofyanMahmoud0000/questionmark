@@ -55,15 +55,15 @@ class Image extends Controller
         if (Str::startsWith($User->image, "http")) {
             return $User->image;
         } elseif ($User->image == $this->DefaultImage) {
-            return secure_asset($this->DefaultPath ."/". $this->DefaultImage);
+            return asset($this->DefaultPath ."/". $this->DefaultImage);
         } else {
-            return secure_asset($this->Path ."/". $User->image);
+            return asset($this->Path ."/". $User->image);
         }
     }
 
     public function ReturnAnonymous()
     {
-        return secure_asset($this->DefaultPath . "/" . $this->DefualtAnonymous);
+        return asset($this->DefaultPath . "/" . $this->DefualtAnonymous);
     }
 
 

@@ -64,9 +64,9 @@ class Cover extends Controller
         if (Str::startsWith($User->cover, "http")) {
             return $User->cover;
         } elseif ($User->cover == null) {
-            return secure_asset($this->DefaultPath ."/". $this->DefaultImage);
+            return asset($this->DefaultPath ."/". $this->DefaultImage);
         } else {
-            return secure_asset($this->Path ."/". $User->cover);
+            return asset($this->Path ."/". $User->cover);
         }
     }
 }
