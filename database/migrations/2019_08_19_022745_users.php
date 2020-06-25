@@ -13,7 +13,7 @@ class Users extends Migration
      */
     public function up()
     {
-        DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users;");
+        // DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users;");
 
         // DB::statement("CREATE SEQUENCE users_seq;");
 
