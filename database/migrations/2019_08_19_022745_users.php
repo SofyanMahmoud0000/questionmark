@@ -13,6 +13,8 @@ class Users extends Migration
      */
     public function up()
     {
+        DB::statement("CREATE SEQUENCE users_seq;");
+
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("email",50)->unique();
@@ -27,6 +29,8 @@ class Users extends Migration
             $table->integer("followers")->default(0);
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE users ALTER COLUMN id set DEFAULT NEXTVAL('users_seq');");
     }
 
     public function down()
