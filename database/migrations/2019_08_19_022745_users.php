@@ -30,7 +30,7 @@ class Users extends Migration
             $table->timestamps();
         });
 
-        DB::statement("SELECT setval(pg_get_serial_sequence('tbl', 'tbl_id'), max(tbl_id)) FROM tbl;");
+        DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users;");
         // DB::statement("ALTER TABLE users ALTER COLUMN id set DEFAULT NEXTVAL('users_seq');");
     }
 
