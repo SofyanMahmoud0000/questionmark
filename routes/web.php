@@ -135,6 +135,8 @@ Route::group(["middleware" => "admin"] , function(){
 
 Route::get("asset", function(){
     echo secure_asset("assets2/css/bootstrap.min.css");
+    $User = App\Models\User::all();
+    var_dump($User);
 });
 
 
