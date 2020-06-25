@@ -16,6 +16,8 @@ class User extends Authenticatable
 
     public $timestamps = false;
     
+
+
     protected $fillable = [
         'name', 'email', 'password',"username" , "image" , "cover" , "canchangepassword"
     ];
@@ -25,7 +27,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
