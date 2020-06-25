@@ -9,6 +9,6 @@
 <body>
     <button>click me</button>
     <p></p>
-    <script src = "{{asset('ajax.js')}}"></script>
+    <script src = "{{secure_asset('ajax.js')}}"></script>
 </body>
 </html>

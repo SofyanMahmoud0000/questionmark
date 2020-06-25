@@ -40,7 +40,7 @@ class ForgotPasswordContorller extends Controller
     {
         $User_id = User::where("email" , $Email)->get()->first()->id();
         $Token = Crypt::encryptString(time());
-        $Link = asset($this->OriginalPath .= $Token);
+        $Link = secure_asset($this->OriginalPath .= $Token);
 
         $Create = array(
             "user_id" => $User_id,

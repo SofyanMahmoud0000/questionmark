@@ -32,21 +32,21 @@
       <div class="container">
         <!-- Navbar-->
         <div class="main-navbar">
-          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="{{asset('home')}}">{{app("AppName")}}</a>
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="{{secure_asset('home')}}">{{app("AppName")}}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="{{asset('home')}}"><i class="fas fa-home"></i>Feed</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{asset('profile')}}"><i class="fas fa-user"></i>Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{asset('friends')}}"><i class="fas fa-user-friends"></i>Friends</a></li>
-                <li class="nav-item active"><a class="nav-link" href="{{asset('inbox')}}"><i class="fas fa-envelope"></i>Inbox
+                <li class="nav-item"><a class="nav-link" href="{{secure_asset('home')}}"><i class="fas fa-home"></i>Feed</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{secure_asset('profile')}}"><i class="fas fa-user"></i>Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{secure_asset('friends')}}"><i class="fas fa-user-friends"></i>Friends</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{secure_asset('inbox')}}"><i class="fas fa-envelope"></i>Inbox
                   @if(app('User')->inbox)
                   <span class="counts-message">{{app('User')->inbox}}</span></a>
                   @else
                   <span class="counts-message" style = "display:none"></span></a>
                   @endif
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{asset('notifications')}}"><i class="fas fa-bell"></i>Notifications
+                <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}"><i class="fas fa-bell"></i>Notifications
                 @if(app('User')->notifications)
                 <span class="counts-notifications">{{app('User')->notifications}}</span></a>
                 @else
@@ -54,7 +54,7 @@
                 @endif
                 </li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="{{app('User')->image}}"/></a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="{{asset('settings')}}">Settings</a><a class="modes dropdown-item" href="#" data-content="Enable dark theme">Disable dark theme</a><a class="dropdown-item" href="{{asset('logout')}}">Log Out</a></div>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="{{secure_asset('settings')}}">Settings</a><a class="modes dropdown-item" href="#" data-content="Enable dark theme">Disable dark theme</a><a class="dropdown-item" href="{{secure_asset('logout')}}">Log Out</a></div>
                 </li>
               </ul>
             </div>
@@ -62,13 +62,13 @@
         </div>
         <div class="mobile-nav">
           <nav class="navbar navbar-expand-lg">
-            <div class="header"><span class="menu"></span><a class="navbar-brand" href="{{asset('home')}}">{{app("AppName")}}        </a></div>
+            <div class="header"><span class="menu"></span><a class="navbar-brand" href="{{secure_asset('home')}}">{{app("AppName")}}        </a></div>
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="{{asset('home')}}" title="Feed"><i class="fas fa-home"></i></a></li>
-              <li class="nav-item"><a class="nav-link" href="{{asset('profile')}}" title="Profile"><img class="img-fluid" src="{{app('User')->image}}"/></a></li>
-              <li class="nav-item"><a class="nav-link" href="{{asset('friends')}}" title="Friends"><i class="fas fa-user-friends"></i></a></li>
-              <li class="nav-item active"><a class="nav-link" href="{{asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i><span class="counts-message">{{app('User')->inbox}}</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="{{asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i><span class="counts-notifications">{{app('User')->notifications}}</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{secure_asset('home')}}" title="Feed"><i class="fas fa-home"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{secure_asset('profile')}}" title="Profile"><img class="img-fluid" src="{{app('User')->image}}"/></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{secure_asset('friends')}}" title="Friends"><i class="fas fa-user-friends"></i></a></li>
+              <li class="nav-item active"><a class="nav-link" href="{{secure_asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i><span class="counts-message">{{app('User')->inbox}}</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i><span class="counts-notifications">{{app('User')->notifications}}</span></a></li>
             </ul>
           </nav>
         </div>
@@ -81,8 +81,8 @@
             <h2>Menu</h2><a href="#"><i class="fas fa-times closer"></i></a>
           </div>
           <ul class="list-unstyled">
-            <li> <a href="{{asset('settings')}}">Settings</a></li>
-            <li> <a href="{{asset('logout')}}">Log Out</a></li>
+            <li> <a href="{{secure_asset('settings')}}">Settings</a></li>
+            <li> <a href="{{secure_asset('logout')}}">Log Out</a></li>
             <li> <a href="#">Help</a></li>
             <li> <a href="#">Terms of use</a></li>
             <li> <a href="#">Privacy policy</a></li>
@@ -112,7 +112,7 @@
                     @if($D->anonymous)
                     <div class="vertical-bar"></div><a class="username"><i class="fas fa-mask"></i>{{$D->name}}</a><a class="time">{{$D->time}}</a>
                     @else
-                    <div class="vertical-bar"></div><a class="username" href="{{asset('profile/' . $D->asker_id)}}"><img class="img-fluid" src="{{$D->image}}"/><span>{{$D->name}}</span></a><a class="time">{{$D->time}}</a>
+                    <div class="vertical-bar"></div><a class="username" href="{{secure_asset('profile/' . $D->asker_id)}}"><img class="img-fluid" src="{{$D->image}}"/><span>{{$D->name}}</span></a><a class="time">{{$D->time}}</a>
                     @endif
                       <div class="message">{{$D->content}}</div>
                     </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="options"><a class="clips" href="#"><i class="fas fa-ellipsis-h"></i></a>
                   <ul class="list-unstyled">
-                    <li><a href="{{asset('deletequestion/' . $D->id)}}">Delete Post</a></li>
+                    <li><a href="{{secure_asset('deletequestion/' . $D->id)}}">Delete Post</a></li>
                   </ul>
                 </div>
                 <div class="actions">
