@@ -134,7 +134,7 @@ Route::group(["middleware" => "admin"] , function(){
 });
 
 Route::get("asset", function(){
-    echo asset("");
+    echo asset("assets2/css/bootstrap.min.css");
 });
 
 
