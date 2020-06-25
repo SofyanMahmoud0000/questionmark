@@ -13,6 +13,8 @@ class Users extends Migration
      */
     public function up()
     {
+        DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users;");
+
         // DB::statement("CREATE SEQUENCE users_seq;");
 
         Schema::create('users', function (Blueprint $table) {
@@ -30,7 +32,6 @@ class Users extends Migration
             $table->timestamps();
         });
 
-        DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users;");
         // DB::statement("ALTER TABLE users ALTER COLUMN id set DEFAULT NEXTVAL('users_seq');");
     }
 
