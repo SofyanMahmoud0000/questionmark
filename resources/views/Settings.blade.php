@@ -68,20 +68,22 @@
               <li class="nav-item"><a class="nav-link" href="#" title="Questions"><i class="fas fa-question-circle"></i></a></li>
               <li class="nav-item"><a class="nav-link" href="{{secure_asset('profile')}}" title="Profile"><img class="img-fluid" src="{{app('User')->image}}"/></a></li>
               <li class="nav-item"><a class="nav-link" href="{{secure_asset('friends')}}" title="Friends"><i class="fas fa-user-friends"></i></a></li>
-              <li class="nav-item"><a class="nav-link" href="{{secure_asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i></a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="{{secure_asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i></a></li>
                 @if(app("User")->inbox)
-                <span class="counts-message">{{app('User')->inbox}}</span></a>
+                <span class="counts-message">{{app('User')->inbox}}</span>
                 else
-                <span class="counts-message" style = "display:none">{{app('User')->inbox}}</span></a>
+                <span class="counts-message" style = "display:none">{{app('User')->inbox}}</span>
                 @endif
-              </li>
-              <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i><span class="counts-notifications">{{app('User')->notifications}}</span></a></li>
+              
+              <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i></a></li>
+                @if(app("User")->notifications)
+                <span class="counts-notifications">{{app('User')->notifications}}</span>
+                else
+                <span class="counts-notifications" style = "display:none">{{app('User')->notifications}}</span>
+                @endif
             </ul>
           </nav>
         </div>
-      </div>
-    </header>
     <div class="pop-setting">
       <div class="menu-setting">
         <div class="inner-box">
