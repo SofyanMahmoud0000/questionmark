@@ -62,7 +62,7 @@ class Controller extends BaseController
             $Notification = (object)array(
                 "type"          => 1,
                 "content"       => $Message,
-                "Url"           => asset("notification?type=" . $Type ."&notific_id=" . $NotificId . "&id="),
+                "Url"           => secure_asset("notification?type=" . $Type ."&notific_id=" . $NotificId . "&id="),
             );
         }
         else
@@ -71,7 +71,7 @@ class Controller extends BaseController
                 "type"          => 0,
                 "user_id"       => app("User")->id,
                 "content"       => $Message,
-                "Url"           => asset("notification?type=" . $Type ."&notific_id=" . $NotificId . "&id="),
+                "Url"           => secure_asset("notification?type=" . $Type ."&notific_id=" . $NotificId . "&id="),
             );
         }
         Notification::send($Notifiable, new Notifications($Notification));
