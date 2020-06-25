@@ -23,7 +23,6 @@ class InitialSeeder extends Seeder
             "image" => "https://img.freepik.com/free-vector/flat-question-mark-concept_23-2148147386.jpg?size=338&ext=jpg",
         );
         User::create($Create);
-        DB::statement("SELECT setval(seq('users', 'id'), coalesce(max(id),1), false) FROM users;");
 
         // Another user
         $Create = array(
@@ -36,7 +35,6 @@ class InitialSeeder extends Seeder
             "confirmed" => 1
         );
         User::create($Create);
-        DB::statement("SELECT setval(seq('users', 'id'), coalesce(max(id),1), false) FROM users;");
 
         $Create = array(
             "id"    => 1,
@@ -47,7 +45,6 @@ class InitialSeeder extends Seeder
             "has_answer" =>1,
         );
         Question::create($Create);
-        DB::statement("SELECT setval(seq('users', 'id'), coalesce(max(id),1), false) FROM users;");
 
 
         $Create = array(
@@ -56,6 +53,5 @@ class InitialSeeder extends Seeder
             "question_id" => 1,
         );
         Answer::create($Create);
-        DB::statement("SELECT setval(seq('users', 'id'), coalesce(max(id),1), false) FROM users;");
     }
 }
