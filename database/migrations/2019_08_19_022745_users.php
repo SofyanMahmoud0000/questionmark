@@ -29,6 +29,7 @@ class Users extends Migration
             $table->boolean("can_change_password")->default(0);
             $table->integer("followings")->default(0);
             $table->integer("followers")->default(0);
+            $table->integer('seq');
             $table->timestamps();
         });
 
