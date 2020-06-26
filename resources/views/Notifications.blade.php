@@ -93,7 +93,7 @@
           </div>
           <ul class="list-unstyled">
             <li> <a href="{{secure_asset('settings')}}">Settings</a></li>
-            <li> <a href="">Log Out</a></li>
+            <li> <a href="{{secure_asset('logout')}}">Log Out</a></li>
             <li> <a href="#">Help</a></li>
             <li> <a href="#">Terms of use</a></li>
             <li> <a href="#">Privacy policy</a></li>
