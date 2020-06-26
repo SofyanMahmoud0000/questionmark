@@ -7,6 +7,7 @@
 * Ask questions as anonymous or non-anonymous
 * Reply to the questions & Delete questions 
 * Follow & Unfollow 
+* Notifications
 * Profile setting 
     * Change name 
     * Change password 
