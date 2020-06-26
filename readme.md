@@ -15,7 +15,7 @@
 * Delete account 
 ## Database 
 
-![Database diagram](https://gethub.com/sofyanmahmoud0000/QuestionMark/blob/master/Database.png)
+![Database diagram](https://github.com/sofyanmahmoud0000/QuestionMark/blob/master/Database.png)
 
 ## Build with 
 * [PHP](https://www.php.net/) - Language used
