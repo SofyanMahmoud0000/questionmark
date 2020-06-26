@@ -15,7 +15,7 @@ class User extends Authenticatable
     public $timestamp = true;
 
     protected $fillable = [
-        'name', 'email', 'password',"username" , "image" , "cover" , "canchangepassword"
+        'name', 'email', 'password',"username" , "image" , "cover" , "canchangepassword","confirmed"
     ];
 
     

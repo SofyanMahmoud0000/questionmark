@@ -80,7 +80,7 @@
 
 
 [16] if you used (<a href = "test"> Link </a>), it will replace the last piece of the pathname with (test)
-    and if you used (<a href = {{secure_asset("test)}}> Link </a>), it will go to (<protocol>://<host>/test)
+    and if you used (<a href = {{asset("test)}}> Link </a>), it will go to (<protocol>://<host>/test)
 
 
 [17] many to many : 

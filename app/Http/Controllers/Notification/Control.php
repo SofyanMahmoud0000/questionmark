@@ -36,7 +36,7 @@ class Control extends Controller
 
                 if(!$Validate->fails())
                 {
-                    return redirect(secure_asset($this->ProfileUrl . $request["notific_id"]));
+                    return redirect(asset($this->ProfileUrl . $request["notific_id"]));
                 }
                 else
                 {
@@ -57,7 +57,7 @@ class Control extends Controller
 
                 if(!$Validate->fails())
                 {
-                    return redirect(secure_asset($this->QuestionUrl . $request["notific_id"]));
+                    return redirect(asset($this->QuestionUrl . $request["notific_id"]));
                 }
                 else
                 {

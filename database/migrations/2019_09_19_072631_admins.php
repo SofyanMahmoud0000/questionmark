@@ -14,6 +14,9 @@ class Admins extends Migration
             $table->string("password");
             $table->string("username")->unique();
             $table->timestamps();
+            $table->integer("ActivatedLastTime")->default(0);
+            $table->integer("DeactivatedLastTime")->default(0);
+
         });
     }
 

@@ -19,12 +19,12 @@
     <link href="https://fonts.googleapis.com/css?family=Righteous&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,700&amp;display=swap" rel="stylesheet"/>
     <!-- Bootstrap-->
-    <link rel="stylesheet" href="{{secure_asset('assets2/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets2/css/bootstrap.min.css')}}"/>
     <!-- Normalize-->
-    <link rel="stylesheet" href="{{secure_asset('assets2/css/normalize.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets2/css/normalize.css')}}"/>
     <!-- Main Source-->
-    <link rel="stylesheet" href="{{secure_asset('assets2/css/main.css')}}"/>
-    <link rel="stylesheet" href="{{secure_asset('assets2/css/dark-theme.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets2/css/main.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets2/css/dark-theme.css')}}"/>
     <title>Friends</title>
   </head>
   <body>
@@ -32,21 +32,21 @@
       <div class="container">
         <!-- Navbar-->
         <div class="main-navbar">
-          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="{{secure_asset('home')}}">{{App("AppName")}}</a>
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="{{asset('home')}}">{{App("AppName")}}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="{{secure_asset('home')}}"><i class="fas fa-home"></i>Feed</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{secure_asset('profile')}}"><i class="fas fa-user"></i>Profile</a></li>
-                <li class="nav-item active"><a class="nav-link" href="{{secure_asset('friends')}}"><i class="fas fa-user-friends"></i>Friends</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{secure_asset('inbox')}}"><i class="fas fa-envelope"></i>Inbox
+                <li class="nav-item"><a class="nav-link" href="{{asset('home')}}"><i class="fas fa-home"></i>Feed</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{asset('profile')}}"><i class="fas fa-user"></i>Profile</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{asset('friends')}}"><i class="fas fa-user-friends"></i>Friends</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{asset('inbox')}}"><i class="fas fa-envelope"></i>Inbox
                   @if(app('User')->inbox)
                   <span class="counts-message">{{app('User')->inbox}}</span></a>
                   @else
                   <span class="counts-message" style = "display:none"></span></a>
                   @endif
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}"><i class="fas fa-bell"></i>Notifications
+                <li class="nav-item"><a class="nav-link" href="{{asset('notifications')}}"><i class="fas fa-bell"></i>Notifications
                   @if(app('User')->notifications)
                   <span class="counts-notifications">{{app('User')->notifications}}</span></a>
                   @else
@@ -54,7 +54,7 @@
                   @endif
                 </li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="{{app('User')->image}}"/></a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="{{secure_asset('settings')}}">Settings</a><a class="modes dropdown-item" href="#" data-content="Enable dark theme">Disable dark theme</a><a class="dropdown-item" href="{{secure_asset('logout')}}">Log Out</a></div>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="{{asset('settings')}}">Settings</a><a class="modes dropdown-item" href="#" data-content="Enable dark theme">Disable dark theme</a><a class="dropdown-item" href="{{asset('logout')}}">Log Out</a></div>
                 </li>
               </ul>
             </div>
@@ -62,19 +62,19 @@
         </div>
         <div class="mobile-nav">
           <nav class="navbar navbar-expand-lg">
-            <div class="header"><span class="menu"></span><a class="navbar-brand" href="{{secure_asset('home')}}">{{app("AppName")}}        </a></div>
+            <div class="header"><span class="menu"></span><a class="navbar-brand" href="{{asset('home')}}">{{app("AppName")}}        </a></div>
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="{{secure_asset('home')}}" title="Feed"><i class="fas fa-home"></i></a></li>
-              <li class="nav-item active"><a class="nav-link" href="{{secure_asset('friends')}}" title="Friends"><i class="fas fa-user-friends"></i></a></li>
-              <li class="nav-item"><a class="nav-link" href="{{secure_asset('profile')}}" title="Profile"><img class="img-fluid" src="{{app('User')->image}}"/></a></li>
-              <li class="nav-item"><a class="nav-link" href="{{secure_asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{asset('home')}}" title="Feed"><i class="fas fa-home"></i></a></li>
+              <li class="nav-item active"><a class="nav-link" href="{{asset('friends')}}" title="Friends"><i class="fas fa-user-friends"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{asset('profile')}}" title="Profile"><img class="img-fluid" src="{{app('User')->image}}"/></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i></a></li>
                 @if(app("User")->inbox)
                 <span class="counts-message">{{app('User')->inbox}}</span>
                 else
                 <span class="counts-message" style = "display:none">{{app('User')->inbox}}</span>
                 @endif
               
-              <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="{{asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i></a></li>
                 @if(app("User")->notifications)
                 <span class="counts-notifications">{{app('User')->notifications}}</span>
                 else
@@ -92,8 +92,8 @@
             <h2>Menu</h2><a href="#"><i class="fas fa-times closer"></i></a>
           </div>
           <ul class="list-unstyled">
-            <li> <a href="{{secure_asset('settings')}}">Settings</a></li>
-            <li> <a href="{{secure_asset('logout')}}">Log Out</a></li>
+            <li> <a href="{{asset('settings')}}">Settings</a></li>
+            <li> <a href="{{asset('logout')}}">Log Out</a></li>
             <li> <a href="#">Help</a></li>
             <li> <a href="#">Terms of use</a></li>
             <li> <a href="#">Privacy policy</a></li>
@@ -105,7 +105,7 @@
     <main>
       <div class="container">
         <section class="friends">
-          <form method="get" action="{{secure_asset('search')}}">
+          <form method="get" action="{{asset('search')}}">
             <div class="search-box">
               <input class="form-control" type="search" name = "search" placeholder="Search by username"/>
               <button class="btn-submit" type="submit"><i class="fas fa-search"></i>Search</button>
@@ -123,7 +123,7 @@
             </div>
           @else
           @foreach($Data as $D)
-          <div class="friend"><a class="rel-friend" href="{{secure_asset('profile/' . $D->id)}}" id="firstfriend"> 
+          <div class="friend"><a class="rel-friend" href="{{asset('profile/' . $D->id)}}" id="firstfriend"> 
               <div class="friends-list"><img class="img-fluid rounded-circle" src="{{$D->image}}"/>
                 <div class="information-friend">
                   <div class="info">
@@ -140,12 +140,12 @@
               </div></a>
               @if(Gate::denies('Me' , $D) && Gate::denies("Team" , $D))
                 @if(Gate::denies('Follow' , $D))
-                  <div class="follow-him"><a class="follow active" href="{{secure_asset('follow/' . $D->id)}}">Follow</a></div>
+                  <div class="follow-him"><a class="follow active" href="{{asset('follow/' . $D->id)}}">Follow</a></div>
                 @else
-                  <div class="follow-him"><a class="follow unfollow" href="{{secure_asset('unfollow/' . $D->id)}}">UnFollow</a></div>
+                  <div class="follow-him"><a class="follow unfollow" href="{{asset('unfollow/' . $D->id)}}">UnFollow</a></div>
                 @endif
               @endif
-            <div class="ask-him"><a class="profile-link" href="{{secure_asset('profile/' . $D->id)}}">Ask<i class="fas fa-chevron-right"></i></a></div>
+            <div class="ask-him"><a class="profile-link" href="{{asset('profile/' . $D->id)}}">Ask<i class="fas fa-chevron-right"></i></a></div>
           </div>
           @endforeach
           @endif
@@ -153,13 +153,13 @@
       </div>
     </main>
     <!-- jQuery v3.4.0-->
-    <script src="{{secure_asset('assets2/js/jquery-3.4.0.min.js')}}"></script>
+    <script src="{{asset('assets2/js/jquery-3.4.0.min.js')}}"></script>
     <!-- BootsTrap v4.3.1-->
-    <script src="{{secure_asset('assets2/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets2/js/bootstrap.min.js')}}"></script>
     <!-- TweenMax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <!-- Main Soruce-->
-    <script src="{{secure_asset('assets2/js/main.js')}}"></script>
+    <script src="{{asset('assets2/js/main.js')}}"></script>
     <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>

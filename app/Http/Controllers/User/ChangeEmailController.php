@@ -47,7 +47,7 @@ class ChangeEmailController extends Controller
     {
 
         $Token = Crypt::encryptString(time());
-        $Link = secure_asset($this->OriginalPath .= $Token);
+        $Link = asset($this->OriginalPath .= $Token);
 
         $Create = array(
             "user_id" => $this->getId(),

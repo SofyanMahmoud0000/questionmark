@@ -33,6 +33,7 @@ class Create extends Controller
                         "image" => $User->avatar,
                         "username" => $this->Username($User->email),
                         "password" => "",
+                        "confirmed" => 1
                     );
                     $UserId = User::create($Create)->id;
                     event(new \App\Events\SignUp($UserId));

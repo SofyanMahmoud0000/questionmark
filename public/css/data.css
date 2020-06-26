@@ -29,8 +29,20 @@ table {
   margin:auto;
   text-align:center;
 }
- th {
+th {
   background: #ccc;
+}
+
+.total{
+  background-color:#8e8e8e;
+}
+
+.increasing{
+  background-color:greenyellow;
+}
+
+.decreasing{
+  background-color:#ff3333;
 }
 
 th, td {
