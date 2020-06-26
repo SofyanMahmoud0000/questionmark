@@ -16,11 +16,11 @@
     <link href="https://fonts.googleapis.com/css?family=Metrophobic&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy&amp;display=swap" rel="stylesheet"/>
     <!-- Bootstrap-->
-    <link rel="stylesheet" href='{{asset("assets/css/bootstrap.min.css")}}'/>
+    <link rel="stylesheet" href='{{secure_asset("assets/css/bootstrap.min.css")}}'/>
     <!-- Normalize-->
-    <link rel="stylesheet" href='{{asset("assets/css/normalize.css")}}'/>
+    <link rel="stylesheet" href='{{secure_asset("assets/css/normalize.css")}}'/>
     <!-- Main Source-->
-    <link rel="stylesheet" href='{{asset("assets/css/main.css")}}'/>
+    <link rel="stylesheet" href='{{secure_asset("assets/css/main.css")}}'/>
   </head>
   <body>
     <main>
@@ -70,12 +70,12 @@
       </section>
     </main>
     <!-- jQuery v3.4.0-->
-    <script src='{{asset("assets/js/jquery-3.4.0.min.js")}}'></script>
+    <script src='{{secure_asset("assets/js/jquery-3.4.0.min.js")}}'></script>
     <!-- BootsTrap v4.3.1-->
-    <script src='{{asset("assets/js/bootstrap.min.js")}}'></script>
+    <script src='{{secure_asset("assets/js/bootstrap.min.js")}}'></script>
     <!-- TweenMax-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <!-- Main Soruce-->
-    <script src='{{asset("assets/js/main.js")}}'></script>
+    <script src='{{secure_asset("assets/js/main.js")}}'></script>
   </body>
 </html>

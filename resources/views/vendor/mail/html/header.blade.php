@@ -1,6 +1,6 @@
 <tr>
     <td class="header">
-        <a href="{{ asset('/') }}">
+        <a href="{{ secure_asset('/') }}">
             {{ app("AppName") }}
         </a>
     </td>
