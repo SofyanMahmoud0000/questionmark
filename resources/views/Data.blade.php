@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{secure_asset('css/data.css')}}">
+    <link rel="stylesheet" href="{{asset('css/data.css')}}">
 </head>
 <body>
 
-    <div><button> <a href = "{{secure_asset('adminlogout')}}">Log out</a> </button></div>
+    <div><button> <a href = "{{asset('adminlogout')}}">Log out</a> </button></div>
 
     <h1> Activated accounts </h1>
     <table class="my_table">
