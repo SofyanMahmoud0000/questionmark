@@ -70,14 +70,14 @@
               <li class="nav-item"><a class="nav-link" href="{{secure_asset('inbox')}}" title="Inbox"><i class="fas fa-envelope"></i></a></li>
                 @if(app("User")->inbox)
                 <span class="counts-message">{{app('User')->inbox}}</span>
-                else
+                @else
                 <span class="counts-message" style = "display:none">{{app('User')->inbox}}</span>
                 @endif
               
               <li class="nav-item"><a class="nav-link" href="{{secure_asset('notifications')}}" title="Notifications"><i class="fas fa-bell"></i></a></li>
                 @if(app("User")->notifications)
                 <span class="counts-notifications">{{app('User')->notifications}}</span>
-                else
+                @else
                 <span class="counts-notifications" style = "display:none">{{app('User')->notifications}}</span>
                 @endif
             </ul>
