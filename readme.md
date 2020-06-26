@@ -13,6 +13,10 @@
     * Change email
     * Change profile & cover photo
 * Delete account 
+
+## Video
+You can see a video for the website by clicking [here](https://www.facebook.com/sofyan.mahmoud.9655/videos/142074827467312/)
+
 ## Database 
 
 ![Database diagram](https://github.com/sofyanmahmoud0000/QuestionMark/blob/master/Database.png)
@@ -23,7 +27,8 @@
 * [MySQL](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html) - database management system
 
 ## Development and support 
-If you have any questions on how to use this website, or have ideas for future development, please send me an e-mail to sofyan1020@gmail.com.
+If you have any questions on how to use this website, or have ideas for future development, 
+please send me an e-mail to sofyan1020@gmail.com.
 
 
 ## Authors
