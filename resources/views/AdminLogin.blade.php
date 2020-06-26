@@ -27,32 +27,12 @@
       <header class="navigation-bar"><a class="text-center upper" href="/">{{app("AppName")}}<span>?</span></a></header>
       <section class="sign-up">
         <div class="container">
-          <div class="pop-sign">
-              <div class="sign-box">
-                <button class="closer" type="button"><i class="fas fa-times">       </i></button>
-                <h4><span>Sign up with</span></h4><a class="google-btn" href="redirect"><i class="fab fa-google"></i>Sign up with Google</a>
-                <h4><span>Or</span></h4>
-                <form method="POST" action="signup">
-                  <label>Name:*</label>
-                  <input class="form-control" type="text" placeholder="" name="name"/>
-                  <label>Email:*</label>
-                  <input class="form-control" type="email" placeholder="" name="email"/>
-                  <label>Password:*</label>
-                  <input class="form-control" type="password" placeholder="" name="password"/>
-                  <label>Confirm Password:*</label>
-                  <input class="form-control" type="password" placeholder="" name="password_confirmation"/>
-                  <button class="submit-btn" type="submit">Register</button>
-                </form>
-              </div>
-            </div>
           <div class="pop-login">
             <div class="login-box">
               <button class="closer" type="button"><i class="fas fa-times"></i></button>
-              <h4><span>Sign in with</span></h4><a class="google-btn" href="redirect"><i class="fab fa-google"></i>Continue with google</a>
-              <h4><span>Or</span></h4>
-              <form method="POST" action="signin">
-                <label>Email:*</label>
-                <input class="form-control" type="email" placeholder="" name="email"/>
+              <form method="POST" action="adminlogin">
+                <label>Username:*</label>
+                <input class="form-control" type="text" placeholder="" name="username"/>
                 <label>Password:*</label>
                 <input class="form-control" type="password" placeholder="" name="password"/>
                 <button class="submit-btn" type="submit">Log In</button>
@@ -63,7 +43,6 @@
             <div class="cat"><img class="img-fluid" src="https://d1muxuiltlupn6.cloudfront.net/assets/owlcat-look-c5bf218fe8bfef6e2d2c1232ead722230299cc78789c2642fd6bb39de0a3bb92.gif"/></div>
             <p class="wel">Curious? Just ask!<br> Openly or anonymously.</p>
             <div class="login-form">
-              <button class="sign-up-btn" type="button">Sign Up</button>
               <button class="log-in-btn" type="button">Log In</button>
             </div>
           </div>

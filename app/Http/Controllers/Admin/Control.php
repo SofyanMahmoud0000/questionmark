@@ -15,7 +15,7 @@ class Control extends Controller
 {
     public function SignIn(Request $request)
     {
-        if(auth()->guard("admin")->attempt(["email" => $request->email , "password" => $request->password]))
+        if(auth()->guard("admin")->attempt(["username" => $request->username , "password" => $request->password]))
         {
             return redirect("data");
         }
@@ -54,21 +54,4 @@ class Control extends Controller
             echo "[id] => " . $User->id . " || [username] => " . $User->username . " || [name] => " . $User->name . " || [email] => " . $User->email . "<br>";  
         }
     }
-
-
-    public function CreateAdmin()
-    {
-        if(Admin::all()->count() == 0)
-        {
-            $Create = [
-                "email"=>"admin" ,
-                "name"=>"admin" ,
-                "password"=>"admin" ,
-                "username"=>"adminadmin"
-            ];
-            Admin::create($Create);
-        }
-        return back();
-    }
-
 }

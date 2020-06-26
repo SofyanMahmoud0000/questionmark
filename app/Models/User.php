@@ -7,16 +7,12 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Hash;
 use App\Modesl\Confirmation;
-use HighSolutions\EloquentSequence\Sequence;
 class User extends Authenticatable
 {
     use Notifiable;
-    use Sequence;
     protected $table = "users";
 
-    public $timestamps = false;
-    
-
+    public $timestamp = true;
 
     protected $fillable = [
         'name', 'email', 'password',"username" , "image" , "cover" , "canchangepassword"
@@ -30,15 +26,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-
-
-    public function sequence()
-    {
-        return [
-            'fieldName' => 'seq',
-        ];
-    }
 
     public function setPasswordAttribute($pass)
     {

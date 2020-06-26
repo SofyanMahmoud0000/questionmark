@@ -8,7 +8,7 @@ class Friend extends Model
 {
     protected $table = "friends";
 
-    public $timestamp = false;
+    public $timestamp = true;
 
     protected $fillable = [
         "followed_id" , "following_id"

@@ -14,6 +14,11 @@ Route::group(["middleware" => "guest:web,admin"] , function(){
         return view('index');
     });
 
+
+    Route::get('adminlogin', function () {
+        return view('AdminLogin');
+    });
+
     // ---------------
     // Back-end
     // ---------------
@@ -32,8 +37,7 @@ Route::group(["middleware" => "guest:web,admin"] , function(){
     Route::get("forgotpasswordcheck" , "User\ForgotPasswordController@TokenCheck");
     Route::get("resetpassword" , "User\ForgotPasswordController@ResetPassword");
 
-    Route::get("adminlogin" , "Admin\Control@SignIn");
-    Route::get("createadmin" , "Admin\Control@CreateAdmin");
+    Route::post("adminlogin" , "Admin\Control@SignIn");
 });
 /*
 |-------------------------------------------
@@ -104,20 +108,6 @@ Route::group(["middleware" => "user"] , function(){
 });
 
 
-
-/*
-|-------------------------------------------
-|              Guest & User
-|-------------------------------------------
-*/
-Route::group(["middleware" => "UserAndGuest:web,admin"] , function(){
-    Route::get("test" , "User\Control@test");
-    Route::get("event" , function(){
-        $Event = event(new \App\Events\SignUp(1));
-    });
-}); 
-
-
 /*
 |------------------------------------
 |              Admin
@@ -127,20 +117,10 @@ Route::group(["middleware" => "UserAndGuest:web,admin"] , function(){
 
 Route::group(["middleware" => "admin"] , function(){
     Route::get("adminlogout" , "Admin\Control@LogOut");
+    Route::get("data" , "Main\Control@Data");
     Route::get("reset" , "Admin\Control@Reset");
-    Route::get("data" , "Admin\Control@Data");
     Route::get("seed" , "Admin\Control@Seed");
-
 });
-
-Route::get("asset", function(){
-    echo secure_asset("assets2/css/bootstrap.min.css");
-    $User = App\Models\User::all();
-    var_dump($User);
-});
-
-
-
 
 
 

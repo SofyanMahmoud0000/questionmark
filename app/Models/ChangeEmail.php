@@ -9,7 +9,7 @@ class ChangeEmail extends Model
 {
     protected $table = "changeemail";
 
-    public $timestamps = false;
+    public $timestamps = true;
     
     protected $fillable = [
         'token', 'user_id' , "email"

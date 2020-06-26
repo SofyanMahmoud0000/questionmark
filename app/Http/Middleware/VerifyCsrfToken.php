@@ -31,7 +31,8 @@ class VerifyCsrfToken extends Middleware
         "followeds",
         "search",
         "createquestion",
-        "changecover"
+        "changecover",
+        "adminlogin"
         
     ];
 }

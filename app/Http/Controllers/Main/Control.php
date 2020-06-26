@@ -28,7 +28,7 @@ class Control extends Controller
         $this->Messages = [
             "Home" => [
                 "Message"   => "There is no posts now, we suggest to follow your friends to see their posts",
-                "Url"       => secure_asset($this->FriendsUrl),
+                "Url"       => asset($this->FriendsUrl),
                 "Button"    => "Find friends",
             ],
             "Friends" => [
@@ -82,7 +82,7 @@ class Control extends Controller
                 if($id == auth()->user()->id)
                 {
                     $this->Messages["Profile"]["Message"] = "You dodn't have any answered question, you can go to your inbox to answer some of your question";
-                    $this->Message["Profile"]["Url"] = secure_asset($this->InboxUrl);
+                    $this->Message["Profile"]["Url"] = asset($this->InboxUrl);
                     $this->Message["Profile"]["Button"] = "Go to inbox";
                 }
             }
@@ -245,5 +245,11 @@ class Control extends Controller
         {
             echo $User->id . " => " . $User->email . "<br>";
         }
+    }
+
+    public function Data(){
+        $Activated      = User::where("confirmed",1)->get(["email","username","name","confirmed"]);
+        $Deactivated    = User::where("confirmed",0)->get(["email","username","name","confirmed"]);
+        return view("Data")->with("Activated",$Activated)->with("Deactivated",$Deactivated);
     }
 }

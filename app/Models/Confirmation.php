@@ -9,7 +9,7 @@ class Confirmation extends Model
 {
     protected $table = "confirmations";
 
-    public $timestamps = false;
+    public $timestamps = true;
     
     protected $fillable = [
         'token', 'user_id'

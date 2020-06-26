@@ -10,11 +10,9 @@ class Admins extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("email",50)->unique();
             $table->string("name");
             $table->string("password");
-            $table->string("username");
-            $table->boolean("can_change_password")->default(0);
+            $table->string("username")->unique();
             $table->timestamps();
         });
     }

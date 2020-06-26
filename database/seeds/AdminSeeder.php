@@ -3,16 +3,15 @@
 use Illuminate\Database\Seeder;
 use App\Models\Admin;
 
-class AdminSedder extends Seeder
+class AdminSeeder extends Seeder
 {
     
     public function run()
     {
         $Create = ([
-            "email"=>"admin@yahoo.com" ,
-            "name"=>"admin" ,
-            "password"=>"password" ,
-            "username"=>"adminadmin"
+            "name"=>"Admin 1" ,
+            "password"=>"publicpassword" ,
+            "username"=>"admin1"
             ]);
 
         Admin::create($Create);

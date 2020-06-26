@@ -13,9 +13,6 @@ class Users extends Migration
      */
     public function up()
     {
-        // DB::statement("SELECT setval(pg_get_serial_sequence('users', 'id'), max(id)) FROM users;");
-
-        // DB::statement("CREATE SEQUENCE users_seq;");
 
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -29,11 +26,9 @@ class Users extends Migration
             $table->boolean("can_change_password")->default(0);
             $table->integer("followings")->default(0);
             $table->integer("followers")->default(0);
-            $table->integer('seq');
             $table->timestamps();
         });
 
-        // DB::statement("ALTER TABLE users ALTER COLUMN id set DEFAULT NEXTVAL('users_seq');");
     }
 
     public function down()
